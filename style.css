@@ -58,3 +58,31 @@ footer {
   font-size: 0.9em;
   color: #777;
 }
+/* Neon Gothic Title */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+.neon-title {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 4em;
+  letter-spacing: 3px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #f0f,
+    0 0 40px #f0f,
+    0 0 80px #f0f;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
