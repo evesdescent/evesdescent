@@ -8,17 +8,71 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header with animated rock texture background */
 header {
-  background-color: #1a1a1a;
-  padding: 20px;
-  text-align: center;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000; /* fallback */
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  letter-spacing: 2px;
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/strates.jpg'); /* 👈 ton image */
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) brightness(30%) contrast(150%);
+  animation: moveTexture 30s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes moveTexture {
+  0% {
+    transform: scale(1.05) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.1) translate(-20px, 20px);
+  }
+  100% {
+    transform: scale(1.05) translate(10px, -10px);
+  }
+}
+
+/* Neon Gothic Title */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+.neon-title {
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 4em;
+  letter-spacing: 3px;
+  color: #000; /* noir profond */
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+  text-shadow:
+    0 0 5px #000,
+    0 0 10px #111,
+    0 0 20px #222,
+    0 0 40px #333,
+    0 0 80px #000;
+  animation: blackGlow 6s ease-in-out infinite;
+}
+
+@keyframes blackGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #000, 0 0 20px #111, 0 0 30px #222;
+  }
+  50% {
+    text-shadow: 0 0 20px #111, 0 0 40px #222, 0 0 60px #333;
+  }
 }
 
 /* Navigation */
