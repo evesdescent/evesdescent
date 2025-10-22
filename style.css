@@ -45,6 +45,7 @@ header::before {
 @font-face {
   font-family: 'CCNearMythFables';
   src: url('fonts/CCNearMythFables.otf') format('opentype');
+       url('fonts/CCNearMythFables.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
