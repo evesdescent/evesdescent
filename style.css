@@ -77,4 +77,11 @@ footer {
     0 0 80px #000;
   animation: flicker 3s infinite alternate;
 }
+@keyframes blackGlow {
+  0%, 100% { text-shadow: 0 0 10px #000, 0 0 20px #111, 0 0 30px #222; }
+  50% { text-shadow: 0 0 20px #111, 0 0 40px #222, 0 0 60px #333; }
+}
 
+.neon-title {
+  animation: blackGlow 6s ease-in-out infinite;
+}
