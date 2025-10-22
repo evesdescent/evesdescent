@@ -30,7 +30,7 @@ header::before {
   background-image: url('images/strates.jpg'); /* ton image */
   background-size: cover;
   background-position: center;
-  filter: grayscale(100%) brightness(30%) contrast(150%);
+  filter: grayscale(10%) brightness(60%) contrast(100%);
   animation: moveTexture 30s ease-in-out infinite alternate;
   z-index: -1;
 }
