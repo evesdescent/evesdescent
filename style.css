@@ -121,7 +121,7 @@ footer {
   font-style: normal;
 }
 
-/* === Evesdescent Title (Black version) === */
+/* === Evesdescent Title (White version) === */
 .neon-title {
   font-family: 'CCNearMythFables', serif;
   font-size: 4.5em;
@@ -130,13 +130,27 @@ footer {
   text-align: center;
   position: relative;
   margin: 60px 0;
-  color: #000; /* Noir profond */
+  color: #f5f5f5; /* blanc doux */
   text-shadow:
-    0 0 5px rgba(0, 0, 0, 0.6),
-    0 0 10px rgba(20, 20, 20, 0.8),
-    0 0 20px rgba(40, 40, 40, 0.9),
-    0 0 30px rgba(60, 60, 60, 0.7);
-  animation: subtlePulse 6s ease-in-out infinite;
+    0 0 5px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2),
+    0 0 25px rgba(255, 255, 255, 0.1);
+  animation: whitePulse 8s ease-in-out infinite;
 }
 
-/* === Subtle shadow breathing anim*
+/* === Breathing light animation === */
+@keyframes whitePulse {
+  0%, 100% {
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 0 25px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 25px rgba(255, 255, 255, 0.4),
+      0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
