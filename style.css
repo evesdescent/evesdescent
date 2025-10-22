@@ -65,24 +65,16 @@ footer {
   font-family: 'UnifrakturCook', cursive;
   font-size: 4em;
   letter-spacing: 3px;
-  color: #fff;
+  color: #000; /* noir profond */
   text-align: center;
   text-transform: uppercase;
   margin: 40px 0;
   text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #f0f,
-    0 0 40px #f0f,
-    0 0 80px #f0f;
-  animation: flicker 2s infinite alternate;
+    0 0 5px #000,
+    0 0 10px #111,
+    0 0 20px #222,
+    0 0 40px #333,
+    0 0 80px #000;
+  animation: flicker 3s infinite alternate;
 }
 
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.4;
-  }
-}
